@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Iniciando estudos com DOM</h1>
+    </header>
+
+    <main>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+        <div id="msg">Clique em mim</div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]; // seleciona o primeiro parágrafo
+        var d = window.document.getElementById('msg'); // seleciona a div
+
+        d.style.background = 'green';
+        // d.innerText = 'Estou aguardando...';        
+        // window.document.getElementById('msg').innerText = 'Olá' este comando fica muito grande, então podemos usar a variável d
+        p1.style.color = 'red'; // muda a cor do texto
+        corpo.style.background = 'black'; // muda a cor do fundo
+        window.document.write("Está escrito assim: " + p1.innerText); // mostra o conteúdo do parágrafo sem formatação
+        document.write("<br>");
+        document.write(p1.innerHTML); // mostra o conteúdo do parágrafo formatado
+    </script>
+</body>
+</html>

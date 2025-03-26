@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Iniciando estudos com DOM</h1>
+    </header>
+
+    <main>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+
+        <div id="msg">Clique em mim</div>
+
+        <div class="msg-class">Clique em mim</div>
+
+        <div class="msg-class">Clique em mim</div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        var corpo = window.document.body
+
+        var p1 = window.document.getElementsByTagName('p')[1]; 
+
+        var d = window.document.getElementById('msg');
+
+        var d = window.document.querySelector('div#msg');
+
+        var divs = window.document.querySelectorAll('div.msg-class');
+
+        // para selecionarmos todos os elementos da classe, podemos usar:
+
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.background = 'blue'
+        }
+
+        // ou
+
+        divs.forEach(div => {
+            div.style.background = 'blue';
+        });
+
+
+        d.style.background = 'green';
+
+
+    </script>
+</body>
+</html>
